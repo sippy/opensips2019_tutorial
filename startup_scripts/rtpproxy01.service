@@ -1,0 +1,14 @@
+[Unit]
+Description=RTPProxy #1
+After=syslog.target
+
+[Service]
+Type=forking
+#User=rtpproxy
+#Group=rtpproxy
+WorkingDirectory=/tmp
+PIDFile=/var/run/rtporoxy01.pid
+ExecStart=/usr/local/bin/rtpproxy -p /var/run/rtporoxy01.pid -s udp:*:5510 -u rtpproxy:rtpproxy -d INFO:LOG_LOCAL5
+
+[Install]
+WantedBy=multi-user.target

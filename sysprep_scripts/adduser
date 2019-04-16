@@ -1,0 +1,3 @@
+adduser --system --no-create-home --group rtpproxy
+sudo ln -sf `pwd`/rtpproxy01.service /lib/systemd/system/
+sudo ln -sf `pwd`/rtpproxy02.service /lib/systemd/system/
