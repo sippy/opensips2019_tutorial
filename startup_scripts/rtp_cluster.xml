@@ -3,7 +3,7 @@
   <rtp_cluster>
     <name>OpenSIPS 2019</name>
     <protocol>UNIX</protocol>
-    <address>/home/pi/rtpproxy.sock</address>
+    <address>/var/run/rtpproxy.sock</address>
 
     <capacity_limit type="hard" />
 
