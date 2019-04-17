@@ -8,7 +8,8 @@ Type=forking
 #Group=rtpproxy
 WorkingDirectory=/tmp
 PIDFile=/var/run/rtporoxy01.pid
-ExecStart=/usr/local/bin/rtpproxy -p /var/run/rtporoxy01.pid -s udp:*:5510 -u rtpproxy:rtpproxy -d INFO:LOG_LOCAL5
+ExecStart=/usr/local/bin/rtpproxy -p /var/run/rtporoxy01.pid -s udp:*:5510 -u rtpproxy:rtpproxy -d INFO:LOG_LOCAL5 \
+  -m 20000 -M 65535
 
 [Install]
 WantedBy=multi-user.target
