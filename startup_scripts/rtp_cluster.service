@@ -1,0 +1,14 @@
+[Unit]
+Description=RTP Cluster
+After=syslog.target
+Requires=rtpproxy01.service
+Requires=rtpproxy02.service
+
+[Service]
+Type=forking
+WorkingDirectory=/tmp
+PIDFile=/var/run/rtp_cluster.pid
+ExecStart=/usr/bin/python3 /home/pi/rtp_cluster/rtp_cluster.py -P /var/run/rtp_cluster.pid -c /home/pi/opensips2019_tutorial/startup_scripts/rtp_cluster.xml -s /var/run/rtp_cluster.sock -L /var/log/rtp_cluster.log
+
+[Install]
+WantedBy=multi-user.target
