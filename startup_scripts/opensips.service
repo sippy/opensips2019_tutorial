@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenSIPS SIP Proxy
+After=syslog.target
+Requires=rtp_cluster.service
+
+[Service]
+Type=forking
+WorkingDirectory=/tmp
+PIDFile=/var/run/opensips.pid
+Restart=always
+ExecStart=/usr/local/sbin/opensips -P /var/run/opensips.pid -m 32 -M 128 \
+  -f /home/pi/opensips2019_tutorial/startup_scripts/opensips.conf
+
+[Install]
+WantedBy=multi-user.target
