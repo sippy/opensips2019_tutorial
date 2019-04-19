@@ -2,8 +2,8 @@
 
   <rtp_cluster>
     <name>OpenSIPS 2019</name>
-    <protocol>UNIX</protocol>
-    <address>/var/run/rtpproxy.sock</address>
+    <protocol>UDP</protocol>
+    <address>127.0.0.1:5500</address>
 
     <capacity_limit type="hard" />
 
