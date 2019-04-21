@@ -26,12 +26,30 @@
     </rtpproxy>
 
     <rtpproxy>
+      <name>RTPPROXY01@brd04</name>
+      <protocol>UDP</protocol>
+      <address>brd04:5510</address>
+      <weight>100</weight>
+      <capacity>25</capacity>
+      <status>ACTIVE</status>
+    </rtpproxy>
+
+    <rtpproxy>
+      <name>RTPPROXY02@brd04</name>
+      <protocol>UDP</protocol>
+      <address>brd04:5520</address>
+      <weight>100</weight>
+      <capacity>25</capacity>
+      <status>ACTIVE</status>
+    </rtpproxy>
+
+    <rtpproxy>
       <name>RTPPROXY01@brd06</name>
       <protocol>UDP</protocol>
       <address>brd06:5510</address>
       <weight>100</weight>
       <capacity>25</capacity>
-      <status>ACTIVE</status>
+      <status>SUSPENDED</status>
     </rtpproxy>
 
     <rtpproxy>
@@ -40,7 +58,7 @@
       <address>brd06:5520</address>
       <weight>100</weight>
       <capacity>25</capacity>
-      <status>ACTIVE</status>
+      <status>SUSPENDED</status>
     </rtpproxy>
   </rtp_cluster>
 
