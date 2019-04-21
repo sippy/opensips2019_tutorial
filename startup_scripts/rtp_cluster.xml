@@ -1,7 +1,7 @@
 <rtp_cluster_config>
 
   <rtp_cluster>
-    <name>OpenSIPS 2019</name>
+    <name>OpenSIPS_2019</name>
     <protocol>UDP</protocol>
     <address>127.0.0.1:5500</address>
 
