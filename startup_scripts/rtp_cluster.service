@@ -1,6 +1,7 @@
 [Unit]
 Description=RTP Cluster
 After=syslog.target
+After=dhcpcd.service
 Requires=rtpproxy01.service
 Requires=rtpproxy02.service
 

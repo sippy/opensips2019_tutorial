@@ -1,6 +1,7 @@
 [Unit]
 Description=RTPProxy #1
 After=syslog.target
+After=dhcpcd.service
 
 [Service]
 Type=forking

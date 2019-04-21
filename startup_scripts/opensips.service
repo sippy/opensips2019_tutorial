@@ -1,6 +1,7 @@
 [Unit]
 Description=OpenSIPS SIP Proxy
 After=syslog.target
+After=dhcpcd.service
 Requires=rtp_cluster.service
 
 [Service]
