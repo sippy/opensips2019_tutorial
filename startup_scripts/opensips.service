@@ -11,6 +11,7 @@ PIDFile=/var/run/opensips.pid
 Restart=always
 ExecStart=/usr/local/sbin/opensips -P /var/run/opensips.pid -m 32 -M 128 \
   -f /home/pi/opensips2019_tutorial/startup_scripts/opensips.conf
+ExecStop=OSIPS_FIFO=/var/run/opensips_fifo /usr/local/sbin/opensipsctl fifo  dbt_dump
 
 [Install]
 WantedBy=multi-user.target
