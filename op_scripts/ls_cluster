@@ -1,1 +1,4 @@
+#!/bin/sh
+
+set -e
 sudo python ~/rtp_cluster/rtp_cluster_client.py -s /var/run/rtp_cluster.sock ls 'OpenSIPS_2019'
