@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+ALL_NODES="`./ls_cluster | grep 'name = ' | awk '{print $3}'`"
+
+for node in ${ALL_NODES}
+do
+  if [ "${node}" != "${1}" ]
+  then
+    args="pause ${node}"
+  else
+    args="resume ${node}"
+  fi
+  sudo python ~/rtp_cluster/rtp_cluster_client.py -s /var/run/rtp_cluster.sock modify 'OpenSIPS_2019' ${args}
+done
