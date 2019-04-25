@@ -11,7 +11,7 @@ WorkingDirectory=/tmp
 PIDFile=/var/run/rtporoxy01.pid
 Restart=always
 ExecStart=/usr/local/bin/rtpproxy -p /var/run/rtporoxy01.pid -s udp:*:5510 -u rtpproxy:rtpproxy -d INFO:LOG_LOCAL5 \
-  -m 20000 -M 65535
+  -m 20000 -M 65535 -r /var/cache/rtpproxy/rdone -S /var/cache/rtpproxy/rspool
 
 [Install]
 WantedBy=multi-user.target
